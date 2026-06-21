@@ -8,3 +8,5 @@
 
 
 [2026-06-22] 대규모 아키텍처 통일성 반영: pyproject.toml, Dockerfile, docker-compose.yml, CI/CD 추가 완료.
+[2026-06-22] E2E 테스트 작성 및 검증 완료.
+

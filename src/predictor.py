@@ -1,4 +1,3 @@
-from typing import Dict, Any
 from .schemas import ReverseEngineeringInput, VerificationResult
 
 def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
