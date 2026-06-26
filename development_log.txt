@@ -1,15 +1,14 @@
-2026-06-22
-- SG_proj_013 저장소 초기화
-- 프로젝트 구조 생성 (src/, tests/, configs/)
-- FastAPI 기반 QA Gateway 엔드포인트(/verify) 구현
-- Pydantic 스키마 정의 (ReverseEngineeringInput, VerificationResult)
-- XGBoost와 IR GNN 특징을 결합한 앙상블 검증 로직 구현
-- 피드백 무한 루프 방지를 위한 Max Iteration Limit (최대 5회) 적용
+# Development Log - SG_proj_013 (QA Gateway)
 
+## 2026-06-22
+- 저장소 초기화 및 QA 검증 로직 구현
+  - SG_proj_013 저장소 초기화 및 프로젝트 구조 생성 (src/, tests/, configs/).
+  - FastAPI 기반 QA Gateway 엔드포인트(/verify) 구현 완료.
+  - Pydantic 스키마 정의 (ReverseEngineeringInput, VerificationResult) 완료.
+  - XGBoost와 IR GNN 특징을 결합한 앙상블 검증 로직 구현.
+  - 피드백 무한 루프 방지를 위한 Max Iteration Limit (최대 5회) 적용.
+  - E2E 테스트 작성 및 검증 완료.
+- 대규모 아키텍처 통일성 반영: pyproject.toml, Dockerfile, docker-compose.yml, CI/CD 추가 완료.
 
-[2026-06-22] 대규모 아키텍처 통일성 반영: pyproject.toml, Dockerfile, docker-compose.yml, CI/CD 추가 완료.
-[2026-06-22] E2E 테스트 작성 및 검증 완료.
-
-
-
-2026-06-27: 불필요한 빌드 캐시, pycache, egg-info 등 임시 파일 일괄 정리 및 루트 경로 대청소 완료.
+## 2026-06-27
+- 불필요한 빌드 캐시, pycache, egg-info 등 임시 파일 일괄 정리 및 루트 경로 대청소 완료.
