@@ -1,3 +1,4 @@
+# 역설계 루프 검증 게이트웨이 모듈의 FastAPI 엔드포인트(/verify) 및 타겟 물성 만족 여부 판정, 피드백 제어 신호 수렴을 테스트하는 검증 스크립트입니다.
 from fastapi.testclient import TestClient
 from src.main import app
 
