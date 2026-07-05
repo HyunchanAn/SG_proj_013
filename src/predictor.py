@@ -1,4 +1,5 @@
 from .schemas import ReverseEngineeringInput, VerificationResult
+from loguru import logger
 
 def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
     """
@@ -6,6 +7,7 @@ def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
     최대 5회의 이터레이션을 통해 무한 루프 방지.
     """
     if data.current_iteration > 5:
+        logger.warning(f"013: Max iteration limit exceeded ({data.current_iteration}). Stopping feedback loop.")
         return VerificationResult(
             is_passed=False,
             predicted_properties={},
@@ -60,10 +62,13 @@ def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
     confidence_score = max(0.0, 1.0 - sum(error_rates.values()) / max(1, len(error_rates)))
     
     if not is_passed:
+        logger.info(f"013: Iteration {data.current_iteration} failed. Confidence: {confidence_score:.3f}. Generating delta correction for next iteration.")
         feedback_signal = {
             "suggested_action": "adjust_parameters",
             "next_iteration": data.current_iteration + 1
         }
+    else:
+        logger.info(f"013: Iteration {data.current_iteration} passed! Confidence: {confidence_score:.3f}")
         
     return VerificationResult(
         is_passed=is_passed,
