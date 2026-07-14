@@ -43,7 +43,7 @@ def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
         predicted_properties[key] = pred_val
         
         if target_val != 0:
-            error = abs(target_val - pred_val) / target_val
+            error = abs(target_val - pred_val) / abs(target_val)
         else:
             error = abs(target_val - pred_val)
         
