@@ -35,5 +35,8 @@ explicit_package_bases = true
 [tool.setuptools]
 packages = ["src"]
 
+
+
 [tool.ruff.lint]
-ignore = ["BLE001", "RUF010", "E501", "E701", "E722", "E402", "B008", "PIE810", "PLR2044", "S110", "SIM102"]
+select = ["E", "F"]
+ignore = ["E402", "E501", "E701", "E722", "F401", "F403", "F405", "F841"]
