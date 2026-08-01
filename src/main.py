@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from src.schemas import ReverseEngineeringInput, VerificationResult
+
 from src.predictor import verify_and_predict
+from src.schemas import ReverseEngineeringInput, VerificationResult
 
 app = FastAPI(title="SG_proj_013 - Reverse Engineering QA Gateway")
 

@@ -1,8 +1,10 @@
 import os
 import pickle
+
 import onnxmltools
-from onnxmltools.convert.common.data_types import FloatTensorType
 from huggingface_hub import HfApi
+from onnxmltools.convert.common.data_types import FloatTensorType
+
 
 def convert_and_push():
     models_dir = "/Users/hyunchanan/Documents/GitHub/SG_proj_013/models"

@@ -1,5 +1,7 @@
-from .schemas import ReverseEngineeringInput, VerificationResult
 from loguru import logger
+
+from .schemas import ReverseEngineeringInput, VerificationResult
+
 
 def verify_and_predict(data: ReverseEngineeringInput) -> VerificationResult:
     """
